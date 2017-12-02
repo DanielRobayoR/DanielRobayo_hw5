@@ -69,8 +69,6 @@ for(j=0;j<600;j++)
 }
 fclose(Datos);
 
-printf("%f \n", Radio[5]);
-
 
 float Bb = 0.2497;
 float Bd = 5.16;
