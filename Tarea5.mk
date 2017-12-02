@@ -7,8 +7,12 @@ figura.png : Plots.py Datos_Ajuste.txt
 Datos_Ajuste.txt : CurvaRotacion.x
 	./CurvaRotacion.x
 
-CurvaRotacion.x : CurvaRotacion.c
+CurvaRotacion.x : CurvaRotacion.c RadialVelocities_2.dat
 	cc CurvaRotacion.c -o CurvaRotacion.x -lm 
+
+RadialVelocities_2.dat : RadialVelocities.dat
+	sed '1d' RadialVelocities.dat > RadialVelocities_2.dat
+
 
 
 
